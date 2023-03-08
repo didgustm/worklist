@@ -13,7 +13,7 @@
 
 	let active = false;
 	lenis.on('scroll', ({ scroll }) => {
-		active = scroll > 0? true: false
+		active = Math.floor(scroll) > 0? true: false
 	});
 
 	const scrollMove = (i) => {

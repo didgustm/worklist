@@ -47,12 +47,12 @@ img{
 @font-face {
     font-family: 'NotoSansKR';
     font-weight:400;
-    src: url(./assets/fonts/NotoSansKR-vf.woff2);
+    src: url(../fonts/NotoSansKR-vf.woff2);
 }
 
 @font-face {
     font-family: 'mont';
-    src: url(./assets/fonts/Montserrat-vf.woff);
+    src: url(../fonts/Montserrat-vf.woff);
 }
 
 html, body{

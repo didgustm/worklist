@@ -1,3 +1,3 @@
 <h1 class="logo">
-    <a href="/">LOGO</a>
+    <a href="/worklist/">LOGO</a>
 </h1>
