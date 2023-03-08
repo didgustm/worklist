@@ -23,5 +23,11 @@ export default defineConfig({
 				entryFileNames: 'assets/js/[name].[hash].js'
 			}
 		}
+	},
+	resolve: {
+		alias: [
+			{ find: "@images", replacement: "/src/assets/images" },
+			{ find: "@components", replacement: "/src/components" }
+		]
 	}
 })

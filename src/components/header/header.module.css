@@ -4,8 +4,9 @@
     left:0;
     right:0;
     height:72px;
-    background:#fff;
-    transition:box-shadow 0.4s
+    background:#fff url(@images/bg.jpg) no-repeat 50% / cover;
+    transition:box-shadow 0.4s;
+    z-index:99
 }
 
 .header .inner{

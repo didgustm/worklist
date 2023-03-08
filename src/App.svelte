@@ -1,6 +1,7 @@
 <script>
 	import Lenis from "@studio-freight/lenis"
-	import Header from "./components/header/Header.svelte";
+	import Header from "@components/header/Header.svelte"
+	import carImg from "@images/car-01.png"
 
 	const lenis = new Lenis({
 		duration: 0.6
@@ -23,7 +24,10 @@
 
 <Header active={active} scrollMove={scrollMove} />
 <main>
-	<section class="sct01">본문1</section>
+	<section class="sct01">
+		본문1
+		<img src="{ carImg }" alt="">
+	</section>
 	<section class="sct02">본문2</section>
 	<section class="sct03">본문3</section>
 	<section class="sct04">본문4</section>
@@ -32,10 +36,16 @@
 
 <style>
 	section{
+		position:relative;
 		display:flex;
 		justify-content:center;
 		align-items:center;
 		height:calc(100vh - 72px);
 		font-size:20px;
+	}
+	.sct01 img{
+		position:absolute;
+		bottom:50px;
+		right:50px
 	}
 </style>
