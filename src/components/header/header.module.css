@@ -1,0 +1,41 @@
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:72px;
+    background:#fff;
+    transition:box-shadow 0.4s
+}
+
+.header .inner{
+    width:1300px;
+    height:100%;
+    margin:0 auto;
+    transition:transform 0.2s
+}
+
+.header .flex{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    padding-bottom:5px
+}
+
+.header li{
+    font-size:15px;
+    margin-left:45px
+}
+
+.header li button:hover{
+    color:#ff687c
+}
+
+/* active */
+.active{
+    box-shadow:0 5px 5px rgba(0,0,0,.12)
+}
+
+.active .inner{
+    transform:translateY(-15px)
+}

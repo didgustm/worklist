@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before{
+	box-sizing:border-box
+}
+
+html,
+body,
+h1,
+h2,
+p,
+button,
+ul,
+dl,
+dd{
+	margin:0;
+	padding:0;
+}
+
+h1,
+h2{
+	font:inherit
+}
+
+ul{
+	list-style:none
+}
+
+a{
+	text-decoration:none;
+	color:inherit
+}
+
+button{
+	background:none;
+	border:none;
+	cursor:pointer;
+	font:inherit;
+	color:inherit
+}
+
+img{
+	max-width:100%;
+	height:auto
+}
+
+@font-face {
+    font-family: 'NotoSansKR';
+    font-weight:400;
+    src: url(./assets/fonts/NotoSansKR-vf.woff2);
+}
+
+@font-face {
+    font-family: 'mont';
+    src: url(./assets/fonts/Montserrat-vf.woff);
+}
+
+html, body{
+    font:400 16px/1 'NotoSansKR'
+}
+
+.mont{
+    font-family:'mont'
+}
+
+main{
+	padding-top:72px
+}
