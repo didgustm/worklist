@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from "svelte"
 	import classNames from "classnames/bind"
 	import Lenis from "@studio-freight/lenis"
 	import Header from "@components/header/Header.svelte"
