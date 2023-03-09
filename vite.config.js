@@ -22,11 +22,6 @@ export default defineConfig({
 				chunkFileNames: 'assets/js/[name].[hash].js',
 				entryFileNames: 'assets/js/[name].[hash].js'
 			}
-		},
-		terserOptions: {
-			compress: {
-				drop_console: true
-			}
 		}
 	},
 	resolve: {
