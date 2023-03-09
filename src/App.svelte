@@ -1,7 +1,13 @@
 <script>
+	import { onMount } from "svelte"
+	import classNames from "classnames/bind"
 	import Lenis from "@studio-freight/lenis"
 	import Header from "@components/header/Header.svelte"
 	import carImg from "@images/car-01.png"
+	
+	let sections = [],
+	active = false,
+	scrollOver = [false, false, false, false, false];
 
 	const lenis = new Lenis({
 		duration: 0.6
@@ -12,26 +18,39 @@
 	}
 	requestAnimationFrame(raf)
 
-	let active = false;
+	
 	lenis.on('scroll', ({ scroll }) => {
-		active = Math.floor(scroll) > 0? true: false
+		active = Math.floor(scroll) > 0? true: false;
+		sections.forEach((x, i) => {
+			scrollOver[i] = x.offsetTop < scroll + window.innerHeight / 1.2? true: scrollOver[i]
+		});
 	});
 
 	const scrollMove = (i) => {
-		lenis.scrollTo(`.sct0${i}`, { offset:-72, duration:1 });
+		lenis.scrollTo(`.sct${i}`, { offset:-72, duration:1 });
 	}
+
+	const header = {
+		scrollMove: scrollMove,
+		classNames: classNames
+	}
+
+	
 </script>
 
-<Header active={active} scrollMove={scrollMove} />
+<Header active={active} { ...header } />
 <main>
-	<section class="sct01">
-		본문1
-		<img src="{ carImg }" alt="">
-	</section>
-	<section class="sct02">본문2</section>
-	<section class="sct03">본문3</section>
-	<section class="sct04">본문4</section>
-	<section class="sct05">본문5</section>
+	{#each Array(5) as _, idx}
+		<section 
+			class="{ classNames(`sct${idx+1}`, { active: scrollOver[idx] }) }"
+			bind:this={sections[idx]}
+		>
+			<p>본문{idx+1}</p>
+			{#if idx == 0}
+				<img src="{ carImg }" alt="">
+			{/if}
+		</section>
+	{/each}
 </main>
 
 <style>
@@ -43,7 +62,16 @@
 		height:calc(100vh - 72px);
 		font-size:20px;
 	}
-	.sct01 img{
+	section p{
+		transform:translateY(80px);
+		opacity:0;
+	}
+	.active p{
+		transform:translateY(0);
+		opacity:1;
+		transition:all 0.6s ease 0.4s
+	}
+	.sct1 img{
 		position:absolute;
 		bottom:50px;
 		right:50px
