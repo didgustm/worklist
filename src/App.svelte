@@ -6,7 +6,8 @@
 	
 	let sections = [],
 	active = false,
-	scrollOver = [false, false, false, false, false];
+	scrollOver = [true, false, false, false, false],
+	current = `gnb1`;
 
 	const lenis = new Lenis({
 		duration: 0.6
@@ -21,7 +22,9 @@
 	lenis.on('scroll', ({ scroll }) => {
 		active = Math.floor(scroll) > 0? true: false;
 		sections.forEach((x, i) => {
-			scrollOver[i] = x.offsetTop < scroll + window.innerHeight / 1.2? true: scrollOver[i]
+			scrollOver[i] = x.offsetTop < scroll + window.innerHeight / 1.2? true: scrollOver[i];
+			current = x.offsetTop <= scroll + 72? `gnb${i+1}`: current;
+			
 		});
 	});
 
@@ -37,7 +40,7 @@
 	
 </script>
 
-<Header active={active} { ...header } />
+<Header active={active} current={current} { ...header } />
 <main>
 	{#each Array(5) as _, idx}
 		<section 

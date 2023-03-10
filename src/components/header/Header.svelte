@@ -2,7 +2,7 @@
     import styles from "./header.module.css"
     import Logo from "./Logo.svelte"
     import Gnb from "./Gnb.svelte"
-    export let classNames, active, scrollMove
+    export let classNames, active, scrollMove, current
 
     const cx = classNames.bind(styles)
     const gnb = {
@@ -16,6 +16,6 @@
 <header class="{ cx('header', { active: active }) } mont">
     <div class="{ `${styles.flex} ${styles.inner}` }">
         <Logo />
-        <Gnb { ...gnb } />
+        <Gnb { ...gnb } current={current} />
     </div>
 </header>
