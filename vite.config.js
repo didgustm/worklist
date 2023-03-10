@@ -26,8 +26,7 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: [
-			{ find: "@images", replacement: "/src/assets/images" },
-			{ find: "@components", replacement: "/src/components" }
+			{ find: "@images", replacement: "/src/assets/images" }
 		]
 	}
 })

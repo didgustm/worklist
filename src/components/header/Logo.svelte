@@ -1,3 +1,7 @@
-<h1 class="logo">
-    <a href="/worklist/">LOGO</a>
+<script>
+    export let styles;
+</script>
+
+<h1 class="{ styles.logo }">
+    <a href="/worklist/">w<span></span></a>
 </h1>

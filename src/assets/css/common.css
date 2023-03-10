@@ -44,19 +44,33 @@ img{
 	height:auto
 }
 
+.blind{
+	font-size:0;
+	line-height:0;
+	text-indent:-999px
+}
+
 @font-face {
-    font-family: 'NotoSansKR';
+    font-family: 'pretend';
     font-weight:400;
-    src: url(../fonts/NotoSansKR-vf.woff2);
+    src: url(../fonts/Pretendard-vf.woff2) format(woff2);
 }
 
 @font-face {
     font-family: 'mont';
-    src: url(../fonts/Montserrat-vf.woff);
+	font-weight:400;
+    src: url(../fonts/Montserrat-vf.woff) format(woff);
 }
 
 html, body{
-    font:400 16px/1 'NotoSansKR'
+    font:400 16px/1 'mont', 'pretend';
+	color:#272727;
+	letter-spacing:-.04em
+}
+
+.forbid_scroll{
+	height:100vh;
+	overflow:hidden
 }
 
 .mont{
@@ -64,5 +78,13 @@ html, body{
 }
 
 main{
-	padding-top:72px
+	padding-left:250px;
+	background:#efefef;
+	overflow:hidden
+}
+
+.inner{
+	position:relative;
+	margin:0 auto;
+	padding:0 60px
 }

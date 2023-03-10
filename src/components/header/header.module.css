@@ -2,42 +2,66 @@
     position:fixed;
     top:0;
     left:0;
-    right:0;
-    height:72px;
+    width:250px;
+    height:100vh;
+    padding:40px 0;
     background:#fff;
-    transition:box-shadow 0.4s;
+    border-right:1px solid #e1e1e1;
     z-index:99
 }
 
-.header .inner{
-    width:1300px;
-    height:100%;
-    margin:0 auto;
-    transition:transform 0.2s
-}
-
-.header .flex{
+.inner{
     display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    padding-bottom:5px
+    flex-flow:column wrap;
+    height:100%;
 }
 
-.header li{
+.logo a{
+    position:relative;
+    font-size:25px;
+    font-weight:600;
+    color:#272727
+}
+
+a span{
+    position:absolute;
+    top:3px;
+    right:-6px;
+    width:6px;
+    height:6px;
+    background:#ff3a91;
+    border-radius:50%
+}
+
+.btns{
     font-size:15px;
-    margin-left:45px
+    color:#878787;
+    padding:40px 0
 }
 
-.header li button:hover,
-.header .active button{
-    color:#ff687c
+li{
+    margin-top:40px
 }
 
-/* active */
-.header.active{
-    box-shadow:0 5px 5px rgba(0,0,0,.12)
+li button{
+    position:relative
+}
+li button::after{
+    content:"";
+    position:absolute;
+    left:-5%;
+    bottom:0;
+    width:110%;
+    height:8px;
+    background:#ff3a91;
+    opacity:0;
+    z-index:-1
 }
 
-.header.active .inner{
-    transform:translateY(-15px)
+li button:hover,
+li.active button{
+    color:#ff3a91
+}
+li.active button::after{
+    opacity:0.2
 }

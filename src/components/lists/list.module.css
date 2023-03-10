@@ -1,0 +1,40 @@
+.worklist{
+    padding:40px 0;
+}
+
+.lists{
+    position:relative;
+    display:grid; 
+    gap:70px; 
+    grid-template-columns:repeat(3, 1fr); 
+    grid-auto-rows:0.5rem;
+}
+
+.item{
+    border-radius:10px;
+    box-shadow:5px 5px 10px rgba(0,0,0,.2);
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 0.6s;
+    overflow:hidden;
+}
+
+.item[data-type="1"]{
+    height:400px
+}
+.item[data-type="2"]{
+    height:350px
+}
+.item[data-type="3"]{
+    height:300px
+}
+
+.item.active{
+    transform:translateY(0);
+    opacity:1
+}
+
+.item button{
+    width:100%;
+    height:100%
+}
