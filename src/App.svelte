@@ -52,9 +52,14 @@
 </script>
 
 <svelte:window 
-	bind:scrollY={y} 
-	on:load={ resizeGridItem(y) }
-	on:resize={ resizeGridItem(y) }
+	bind:scrollY={y}
+	on:load={ () => {
+		resizeGridItem();
+		motions.forEach((x, i) => {
+			items[i].show  = x.offsetTop < (y+window.innerHeight) / 1.2? true: items[i].show ;
+		})
+	} }
+	on:resize={ resizeGridItem }
 />
 
 <Header classNames={ classNames } />
