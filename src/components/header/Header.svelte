@@ -2,7 +2,7 @@
     import styles from "./header.module.css"
     import Logo from "./Logo.svelte"
     import Btn from "./Btn.svelte";
-    export let classNames
+    export let classNames, direction
 
     const cx = classNames.bind(styles)
     const gnb = {
@@ -11,7 +11,7 @@
     }
 </script>
 
-<header class="{ cx('header') } mont">
+<header class="{ cx('header', { fade: direction >= 0 }) } mont">
     <div class="inner { styles.inner }">
         <Logo styles={ styles } />
         <Btn { ...gnb } />

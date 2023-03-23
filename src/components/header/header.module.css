@@ -18,8 +18,7 @@
 
 .logo a{
     position:relative;
-    font-size:25px;
-    font-weight:600;
+    font-size:30px;
     color:#272727
 }
 
@@ -55,6 +54,8 @@ li button::after{
     height:8px;
     background:#ff3a91;
     opacity:0;
+    transform:scaleX(0);
+    transition:transform 0.4s;
     z-index:-1
 }
 
@@ -63,5 +64,64 @@ li.active button{
     color:#ff3a91
 }
 li.active button::after{
-    opacity:0.2
+    opacity:0.2;
+    transform:scaleX(1)
+}
+
+@media (max-width:1000px) {
+    .header{
+        width:100%;
+        height:auto;
+        border-right:none;
+        box-shadow:0 5px 10px rgba(0,0,0,.1);
+        padding:20px 0;
+        transition:transform 0.4s
+    }
+    .header.fade{
+        transform:translateY(-100%)
+    }
+    .inner{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:flex-end
+    }
+    .btns{
+        display:flex;
+        justify-content: space-between;
+        width:50%;
+        padding:0 0 0 20px;
+        font-size:1rem
+    }
+    li{
+        margin-top:0
+    }
+}
+
+@media (max-width:700px){
+    .header{
+        padding:2rem 0
+    }
+    .logo{
+        width:100%;
+        text-align:center;
+        padding-bottom:2rem;
+        border-bottom:1px solid #e1e1e1
+    }
+    .logo a{
+        font-size:3rem
+    }
+    a span{
+        top:0.3rem;
+        right:-0.6rem;
+        width:0.6rem;
+        height:0.6rem
+    }
+    .btns{
+        width:100%;
+        font-size:1.5rem;
+        padding:2rem 0 0
+    }
+    li button::after{
+        height:0.8rem
+    }
 }

@@ -28,7 +28,8 @@ ul{
 
 a{
 	text-decoration:none;
-	color:inherit
+	color:inherit;
+	-webkit-tap-highlight-color:transparent
 }
 
 button{
@@ -36,7 +37,9 @@ button{
 	border:none;
 	cursor:pointer;
 	font:inherit;
-	color:inherit
+	color:inherit;
+	outline:none;
+	-webkit-tap-highlight-color:transparent
 }
 
 img{
@@ -53,13 +56,13 @@ img{
 @font-face {
     font-family: 'pretend';
     font-weight:400;
-    src: url(../fonts/Pretendard-vf.woff2) format(woff2);
+    src: url(../fonts/Pretendard-vf.woff2) format(woff2)
 }
 
 @font-face {
     font-family: 'mont';
 	font-weight:400;
-    src: url(../fonts/Montserrat-vf.woff) format(woff);
+    src: url(../fonts/Montserrat-vf.woff) format(woff)
 }
 
 html, body{
@@ -88,4 +91,51 @@ main{
 	position:relative;
 	margin:0 auto;
 	padding:0 60px
+}
+
+.semi{
+	font-variation-settings:'wght' 600;
+}
+
+@media (max-width:1000px){
+	main{
+		padding-top:116px;
+		padding-left:0
+	}
+}
+
+@media (max-width:700px){
+	html{
+		font-size:10px
+	}
+	body{
+		font-size:1.6rem
+	}
+	main{
+		padding-top:11.6rem
+	}
+	.inner{
+		padding:0 5rem
+	}
+}
+
+@media (max-width:470px){
+	html{
+		font-size:9px
+	}
+	.inner{
+		padding:0 3rem
+	}
+}
+
+@media (max-width:375px){
+	html{
+		font-size:8px
+	}
+}
+
+@media (max-width:300px){
+	html{
+		font-size:7px
+	}
 }

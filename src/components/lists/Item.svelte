@@ -12,7 +12,7 @@
 >
     <button type="button" class="btn_more">
         <!-- <img src="/worklist/images/fasthunter/thumnail.webp" alt="" class="thumnail"> -->
-        <Title styles={ styles } item={ item } />
-        <Info  styles={ styles } item={ item } />
+        <!-- <Title styles={ styles } item={ item } />
+        <Info  styles={ styles } item={ item } /> -->
     </button>
 </div>

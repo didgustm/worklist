@@ -5,9 +5,9 @@
 .lists{
     position:relative;
     display:grid; 
-    gap:2rem; 
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-    grid-auto-rows:0.5rem;
+    gap:60px; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-auto-rows:10px;
 }
 
 .item{
@@ -19,22 +19,62 @@
     overflow:hidden;
 }
 
-.item[data-type="1"]{
-    height:400px
-}
-.item[data-type="2"]{
-    height:350px
-}
-.item[data-type="3"]{
-    height:300px
-}
-
 .item.active{
     transform:translateY(0);
     opacity:1
 }
 
 .item button{
-    width:100%;
-    height:100%
+    width:100%
+}
+.item[data-type="1"] button{
+    height:400px
+}
+.item[data-type="2"] button{
+    height:350px
+}
+.item[data-type="3"] button{
+    height:300px
+}
+
+.item:nth-child(5n) button{
+    background:darkcyan
+}
+.item:nth-child(5n-1) button{
+    background:darkkhaki
+}
+.item:nth-child(5n-2) button{
+    background:darksalmon
+}
+.item:nth-child(5n-3) button{
+    background:darkslateblue
+}
+.item:nth-child(5n-4) button{
+    background:darkseagreen
+}
+
+@media (max-width:1030px) {
+    .lists{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    }
+}
+
+@media (max-width:700px) {
+    .worklist{
+        padding:4rem 0
+    }
+    .lists{
+        gap:6rem; 
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr)); 
+        grid-auto-rows:1rem;
+    }
+    .item[data-type="1"] button{
+        height:40rem
+    }
+    .item[data-type="2"] button{
+        height:35rem
+    }
+    .item[data-type="3"] button{
+        height:30rem
+    }
 }
