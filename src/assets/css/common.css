@@ -1,3 +1,7 @@
+:root{
+	--theme: #ed6075
+}
+
 *,
 *::after,
 *::before{
@@ -76,8 +80,11 @@ html, body{
 	overflow:hidden
 }
 
-.mont{
-    font-family:'mont'
+.theme-color{
+	color:var(--theme)
+}
+.theme-bg{
+	background-color:var(--theme)
 }
 
 main{

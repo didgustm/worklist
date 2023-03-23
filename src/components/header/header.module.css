@@ -28,7 +28,6 @@ a span{
     right:-6px;
     width:6px;
     height:6px;
-    background:#ff3a91;
     border-radius:50%
 }
 
@@ -52,7 +51,7 @@ li button::after{
     bottom:0;
     width:110%;
     height:8px;
-    background:#ff3a91;
+    background:var(--theme);
     opacity:0;
     transform:scaleX(0);
     transition:transform 0.4s;
@@ -61,7 +60,7 @@ li button::after{
 
 li button:hover,
 li.active button{
-    color:#ff3a91
+    color:var(--theme)
 }
 li.active button::after{
     opacity:0.2;

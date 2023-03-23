@@ -6,7 +6,7 @@ function resizeGridItem(){
 
     items.forEach(x => {
         const h = x.querySelector('button').getBoundingClientRect().height,
-                    rowSpan = Math.floor((h + rowGap) / (rowHeight + rowGap));
+                    rowSpan = Math.ceil((h + rowGap) / (rowHeight + rowGap));
         x.style.gridRowEnd = `span ${rowSpan}`;
     })
 }

@@ -11,12 +11,9 @@
 }
 
 .item{
-    border-radius:10px;
-    box-shadow:5px 5px 10px rgba(0,0,0,.2);
     opacity:0;
     transform:translateY(50px);
     transition:all 0.6s;
-    overflow:hidden;
 }
 
 .item.active{
@@ -27,31 +24,43 @@
 .item button{
     width:100%
 }
-.item[data-type="1"] button{
-    height:400px
-}
-.item[data-type="2"] button{
-    height:350px
-}
-.item[data-type="3"] button{
-    height:300px
+
+.item .thumnail{
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:5px 5px 10px rgba(0,0,0,.2)
 }
 
-.item:nth-child(5n) button{
+.item[data-type="1"] .thumnail{
+    height:350px
+}
+.item[data-type="2"] .thumnail{
+    height:300px
+}
+.item[data-type="3"] .thumnail{
+    height:250px
+}
+
+.item:nth-child(5n) .thumnail{
     background:darkcyan
 }
-.item:nth-child(5n-1) button{
+.item:nth-child(5n-1) .thumnail{
     background:darkkhaki
 }
-.item:nth-child(5n-2) button{
+.item:nth-child(5n-2) .thumnail{
     background:darksalmon
 }
-.item:nth-child(5n-3) button{
+.item:nth-child(5n-3) .thumnail{
     background:darkslateblue
 }
-.item:nth-child(5n-4) button{
+.item:nth-child(5n-4) .thumnail{
     background:darkseagreen
 }
+
+.item_info{
+    text-align:left;
+    padding:0 1rem
+} 
 
 @media (max-width:1030px) {
     .lists{
@@ -64,17 +73,20 @@
         padding:4rem 0
     }
     .lists{
-        gap:6rem; 
+        gap:4rem; 
         grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr)); 
         grid-auto-rows:1rem;
     }
-    .item[data-type="1"] button{
+    .item .thumnail{
+        margin-bottom:2rem
+    }
+    .item[data-type="1"] .thumnail{
         height:40rem
     }
-    .item[data-type="2"] button{
+    .item[data-type="2"] .thumnail{
         height:35rem
     }
-    .item[data-type="3"] button{
+    .item[data-type="3"] .thumnail{
         height:30rem
     }
 }
