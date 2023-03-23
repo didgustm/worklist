@@ -72,7 +72,8 @@ img{
 html, body{
     font:400 16px/1 'mont', 'pretend';
 	color:#272727;
-	letter-spacing:-.04em
+	letter-spacing:-.04em;
+	word-break: keep-all;
 }
 
 .forbid_scroll{
@@ -102,6 +103,9 @@ main{
 
 .semi{
 	font-variation-settings:'wght' 600;
+}
+.medium{
+	font-variation-settings: 'wght' 500;
 }
 
 @media (max-width:1000px){
