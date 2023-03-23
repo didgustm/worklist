@@ -11,7 +11,7 @@
     }
 </script>
 
-<header class="{ cx('header', { fade: direction >= 0 }) } mont">
+<header class="{ cx('header', { fade: direction == 1 }) } mont">
     <div class="inner { styles.inner }">
         <Logo styles={ styles } />
         <Btn { ...gnb } />

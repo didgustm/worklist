@@ -74,6 +74,7 @@ html, body{
 	color:#272727;
 	letter-spacing:-.04em;
 	word-break: keep-all;
+	touch-action:manipulation
 }
 
 .forbid_scroll{
