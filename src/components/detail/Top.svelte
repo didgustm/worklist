@@ -1,5 +1,5 @@
 <script>
-    export let styles, width, item
+    export let styles, width, item, detailHide
 </script>
 
 <div class="{ styles.top }">
@@ -9,15 +9,13 @@
         <a href="https://fasthunter.co.kr/" class="{styles.link}" target="_blank" rel="noreferrer">
             Go
         </a>
-        <button type="button" class="{styles.close}">
+        <button type="button" class="{styles.close}" on:click={ detailHide }>
             X
         </button>
     </div>
     {:else}
-    <div class="utils">
-        <button type="button" class="{styles.close}">
-            X
-        </button>
-    </div>
+    <button type="button" class="{styles.close}" on:click={ detailHide }>
+        X
+    </button>
     {/if}
 </div>

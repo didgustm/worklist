@@ -12,7 +12,8 @@
 		way,
 		beforeScroll = 0,
 		motions = [],
-		detailItem = items[0];
+		detailItem = items[0],
+		visible = false;
 
 	const lenis = new Lenis({
 		duration: 0.6
@@ -25,7 +26,11 @@
 
 	function detailShow(item){
 		detailItem = item;
+		visible = true
 		// console.log(detailItem)
+	}
+	function detailHide(){
+		visible = false
 	}
 
 	lenis.on('scroll', ({scroll, direction}) => {
@@ -57,8 +62,9 @@
 <main>
 	<List classNames={ classNames } items={ items } motions={ motions } detailShow={ detailShow } />
 </main>
-<Detail classNames={ classNames } detailItem={ detailItem } width={ w } />
-
+{#if visible}
+<Detail classNames={ classNames } detailItem={ detailItem } width={ w } detailHide={ detailHide } />
+{/if}
 <style>
 
 </style>

@@ -13,9 +13,7 @@
     <button 
         type="button" 
         class="btn_more"
-        on:click={ () => {
-            detailShow(item);
-        } }
+        on:click={ detailShow(item) }
     >
         <Thumnail styles={ styles } item={ item } />
         <Info  styles={ styles } item={ item } />

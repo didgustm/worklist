@@ -3,13 +3,13 @@
     import Top from "./Top.svelte";
 
 
-    export let styles, item, width
+    export let styles, item, width, detailHide
 </script>
 
 <div class="{ styles.txt }">
     <div class="{ styles.wrap }">
         {#if width > 1000}
-            <Top styles={styles} width={ width } item={ item } />
+            <Top styles={styles} width={ width } item={ item } detailHide={ detailHide } />
         {/if}
         <p class="{styles.explain}">Explain About...</p>
         <dl>
