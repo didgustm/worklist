@@ -5,7 +5,75 @@
 	import List from "./components/lists/List.svelte";
 	import Detail from "./components/detail/Detail.svelte";
 	import { resizeGridItem } from "./assets/js/resizeGridItem";
-	import { items } from "./components/items/Items";
+	// import { items } from "./components/items/Items";
+
+	let items = [
+    {   
+        name: "TITLE1",
+        title: "TITLE1",
+        type: 1,
+        date: "23. 03. 21.",
+        device: "Mobile",
+        show: false
+    },
+    {   
+        name: "TITLE2",
+        title: "TITLE2",
+        type: 2,
+        date: "23. 02. 13.",
+        device: "PC, Mobile",
+        show: false
+    },
+    {   
+        name: "TITLE3",
+        title: "TITLE3",
+        type: 2,
+        date: "23. 02. 01.",
+        device: "Mobile",
+        show: false
+    },
+    {   
+        name: "TITLE4",
+        title: "TITLE4",
+        type: 3,
+        date: "22. 12. 22.",
+        device: "PC, Mobile",
+        show: false
+    },
+    {   
+        name: "TITLE1",
+        title: "TITLE1",
+        type: 1,
+        date: "23. 03. 21.",
+        device: "Mobile",
+        show: false
+    },
+    {   
+        name: "TITLE2",
+        title: "TITLE2",
+        type: 2,
+        date: "23. 02. 13.",
+        device: "PC, Mobile",
+        show: false
+    },
+    {   
+        name: "TITLE3",
+        title: "TITLE3",
+        type: 2,
+        date: "23. 02. 01.",
+        device: "Mobile",
+        show: false
+    },
+    {   
+        name: "TITLE4",
+        title: "TITLE4",
+        type: 3,
+        date: "22. 12. 22.",
+        device: "PC, Mobile",
+        show: false
+    }
+]
+
 
 	let y,
 		w,
@@ -14,6 +82,7 @@
 		motions = [],
 		detailItem = items[0],
 		visible = false;
+	$: sort = 0;
 
 	const lenis = new Lenis({
 		duration: 0.6
@@ -24,13 +93,23 @@
 	}
 	requestAnimationFrame(raf);
 
+	function gnbClick(i){
+		sort = i;
+		console.log(items);
+		items.forEach(x => x.show = x.type == i? true: x.show);
+		items = items;
+	}
+
 	function detailShow(item){
 		detailItem = item;
-		visible = true
-		// console.log(detailItem)
+		visible = true;
+		document.documentElement.classList.add('forbid_scroll');
+		lenis.stop();
 	}
 	function detailHide(){
-		visible = false
+		visible = false;
+		document.documentElement.classList.remove('forbid_scroll');
+		lenis.start();
 	}
 
 	lenis.on('scroll', ({scroll, direction}) => {
@@ -58,12 +137,12 @@
 	} }
 />
 
-<Header classNames={ classNames } direction={ way } />
+<Header { classNames } direction={ way } { gnbClick } />
 <main>
-	<List classNames={ classNames } items={ items } motions={ motions } detailShow={ detailShow } />
+	<List { classNames } { items } { motions } { detailShow } { sort } />
 </main>
 {#if visible}
-<Detail classNames={ classNames } detailItem={ detailItem } width={ w } detailHide={ detailHide } />
+<Detail { classNames } { detailItem } width={ w } { detailHide } />
 {/if}
 <style>
 

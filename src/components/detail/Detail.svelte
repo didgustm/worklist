@@ -9,12 +9,17 @@
     const cx = classNames.bind(styles)
 </script>
 
-<div class="{ styles.detail }" in:fly={{ y: window.innerHeight, opacity: 1, duration:700 }} out:fly={{ y: window.innerHeight, opacity: 1, duration:700 }}>
+<div 
+    class="{ styles.detail }"
+    data-lenis-prevent
+    in:fly={{ y: window.innerHeight, opacity: 1, duration:700 }} 
+    out:fly={{ y: window.innerHeight, opacity: 1, duration:700 }}
+>
     {#if width <= 1000}
-        <Top styles={ styles } width={ width } item={ detailItem } detailHide={ detailHide } />
+        <Top { styles } { width } item={ detailItem } { detailHide } />
     {/if}
     <div class="{ styles.inner }">
-        <Img styles={ styles } />
-        <Text styles={ styles } item={ detailItem } width={ width } detailHide={ detailHide } />
+        <Img { styles } />
+        <Text { styles } item={ detailItem } { width } { detailHide } />
     </div>
 </div>

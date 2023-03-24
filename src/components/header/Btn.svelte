@@ -1,5 +1,5 @@
 <script>
-    export let menus, cx
+    export let menus, cx, gnbClick
     let current = `gnb1`
 </script>
 
@@ -8,7 +8,10 @@
         <li class="{ cx(`gnb${i+1}`, { active: current == `gnb${i+1}` }) }">
             <button
                 type="button" 
-                on:click={ () => current = `gnb${i+1}` }
+                on:click={ () => {
+                    current = `gnb${i+1}`;
+                    gnbClick(i);
+                } }
             >
                 {menu}
             </button>

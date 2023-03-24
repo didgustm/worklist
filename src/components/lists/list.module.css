@@ -21,6 +21,13 @@
     opacity:1
 }
 
+.item.hide{
+    position:absolute;
+    visibility:hidden;
+    opacity:0;
+    z-index:-10;
+}
+
 .item button{
     width:100%
 }

@@ -1,9 +1,15 @@
 <script>
     import Item from "./Item.svelte"
     import styles from "./list.module.css"
-    export let classNames, items, motions, detailShow
+    export let classNames, items, motions, detailShow, sort
 
     const cx = classNames.bind(styles);
+    const listItem = {
+        styles: styles,
+        motions: motions,
+        cx: cx,
+        detailShow: detailShow
+    }
     
 </script>
 
@@ -11,7 +17,7 @@
     <div class="inner">
         <div class="lists { styles.lists }">
             {#each items as item, idx}
-                <Item styles={ styles } item={ item } motions={ motions } cx={ cx } idx={ idx } detailShow={ detailShow } />
+                <Item { item } { idx } {...listItem} { sort } />
             {/each}
         </div>
     </div>
