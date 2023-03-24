@@ -21,6 +21,9 @@
     font-size:30px;
     color:#272727
 }
+.logo img{
+    width:40px
+}
 
 a span{
     position:absolute;
@@ -108,6 +111,9 @@ li.active button::after{
     }
     .logo a{
         font-size:3rem
+    }
+    .logo img{
+        width:4rem
     }
     a span{
         top:0.3rem;
