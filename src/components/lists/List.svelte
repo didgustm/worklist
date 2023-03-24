@@ -17,7 +17,13 @@
     <div class="inner">
         <div class="lists { styles.lists }">
             {#each items as item, idx}
-                <Item { item } { idx } {...listItem} { sort } />
+                {#if sort == 0}
+                <Item { item } { idx } {...listItem} />
+                {:else}
+                    {#if sort == item.type}
+                    <Item { item } { idx } {...listItem} />
+                    {/if}
+                {/if}
             {/each}
         </div>
     </div>

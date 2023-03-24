@@ -13,19 +13,13 @@
 .item{
     opacity:0;
     transform:translateY(50px);
-    transition:all 0.6s;
+    transition-property: transform, opacity;
+    transition-duration:0.8s;
 }
 
 .item.active{
     transform:translateY(0);
     opacity:1
-}
-
-.item.hide{
-    position:absolute;
-    visibility:hidden;
-    opacity:0;
-    z-index:-10;
 }
 
 .item button{
@@ -36,6 +30,16 @@
     margin-bottom:20px;
     border-radius:10px;
     box-shadow:5px 5px 10px rgba(0,0,0,.2)
+}
+
+.item[data-type="1"]{
+    grid-row-end: span 7;
+}
+.item[data-type="2"]{
+    grid-row-end: span 6;
+}
+.item[data-type="3"]{
+    grid-row-end: span 5;
 }
 
 .item[data-type="1"] .thumnail{
@@ -68,6 +72,14 @@
     text-align:left;
     padding:0 1rem
 } 
+.name{
+    font-size:20px
+}
+.type{
+    font-size:14px;
+    color:#878787;
+    margin-top:5px
+}
 
 @media (max-width:1030px) {
     .lists{
@@ -87,6 +99,15 @@
     .item .thumnail{
         margin-bottom:2rem
     }
+    .item[data-type="1"]{
+        grid-row-end: span 10;
+    }
+    .item[data-type="2"]{
+        grid-row-end: span 9;
+    }
+    .item[data-type="3"]{
+        grid-row-end: span 8;
+    }
     .item[data-type="1"] .thumnail{
         height:40rem
     }
@@ -95,5 +116,12 @@
     }
     .item[data-type="3"] .thumnail{
         height:30rem
+    }
+    .name{
+        font-size:2rem
+    }
+    .type{
+        font-size:1.4rem;
+        margin-top:0.5rem
     }
 }

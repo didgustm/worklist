@@ -1,5 +1,4 @@
 <script>
-    import { items } from "../items/Items";
     import Top from "./Top.svelte";
 
 

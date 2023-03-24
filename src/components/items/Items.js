@@ -1,4 +1,4 @@
-let items = [
+let arrays = [
     {   
         name: "TITLE1",
         title: "TITLE1",
@@ -65,4 +65,4 @@ let items = [
     }
 ]
 
-export { items }
+export { arrays }
