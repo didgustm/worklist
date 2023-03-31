@@ -1,4 +1,7 @@
 <script>
+    import close from '@images/close.png'
+    import enter from '@images/enter.png'
+
     export let styles, width, item, detailHide
 </script>
 
@@ -7,15 +10,15 @@
     {#if width <= 1000}
     <div class="{styles.utils}">
         <a href="https://fasthunter.co.kr/" class="{styles.link}" target="_blank" rel="noreferrer">
-            Go
+            <img src="{ enter }" alt="">
         </a>
         <button type="button" class="{styles.close}" on:click={ detailHide }>
-            X
+            <img src="{ close }" alt="">
         </button>
     </div>
     {:else}
     <button type="button" class="{styles.close}" on:click={ detailHide }>
-        X
+        <img src="{ close }" alt="">
     </button>
     {/if}
 </div>

@@ -40,6 +40,10 @@
 .top .link{
     width:40px
 }
+.top .close{
+    width:28px;
+    margin-top:0.7rem
+}
 
 .img{
     width:70%;
@@ -101,7 +105,7 @@ dd a{
         position: static;
     }
     .top .link{
-        width:3rem;
+        margin-right:30px;
         margin-top:0.5rem
     }
 }
@@ -126,6 +130,10 @@ dd a{
     }
     .top .link{
         width:3.3rem;
+        margin-top:0
+    }
+    .top .close{
+        width:2.4rem;
         margin-top:0
     }
 }

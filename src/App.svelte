@@ -45,12 +45,19 @@
 		detailItem = item;
 		visible = true;
 		document.documentElement.classList.add('forbid_scroll');
+		location.hash = `${item.name}`
 		lenis.stop();
 	}
 	function detailHide(){
 		visible = false;
 		document.documentElement.classList.remove('forbid_scroll');
+		history.replaceState("", "", location.pathname)
 		lenis.start();
+	}
+	function back(){
+		const target = location.hash.replace('#', '');
+		if(target != '') detailShow(target);
+		else detailHide;
 	}
 	
 </script>
@@ -63,6 +70,7 @@
 		way = beforeScroll < y? 1: -1;
 		beforeScroll = y
 	} }
+	on:hashchange={ back }
 />
 
 <Header { classNames } direction={ way } { gnbClick } />
