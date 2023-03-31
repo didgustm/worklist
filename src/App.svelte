@@ -25,10 +25,7 @@
 		requestAnimationFrame(raf)
 	}
 	requestAnimationFrame(raf);
-	lenis.on('scroll', ({scroll, direction}) => {
-		scrollActive(scroll);
-		if(window.innerWidth <= 1000 && direction != 0) way = direction;
-	});
+	// lenis.on('scroll', ({scroll}) => scrollActive(scroll));
 
     // Function
     function scrollActive(pos){
@@ -65,12 +62,24 @@
 <svelte:window 
 	bind:scrollY={y}
 	bind:innerWidth={w}
-	on:load={ () => scrollActive(y) }
-	on:scroll = { () => {
-		way = beforeScroll < y? 1: -1;
-		beforeScroll = y
+	on:load={ () => {
+		scrollActive(y);
+		w > 1000? lenis.on('scroll', ({scroll}) => scrollActive(scroll)): lenis.destroy();
 	} }
-	on:hashchange={ back }
+	on:resize={ () => {
+		scrollActive(y);
+		w > 1000? lenis.on('scroll', ({scroll}) => scrollActive(scroll)): lenis.destroy();
+	} }
+	on:scroll = { () => {
+		if(w <= 1000){
+			const h = document.querySelector('header').offsetHeight;
+			scrollActive(y);
+			if(y > h){
+				way = beforeScroll < y? 1: -1;
+				beforeScroll = y
+			}
+		}
+	} }
 />
 
 <Header { classNames } direction={ way } { gnbClick } />
