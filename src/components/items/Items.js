@@ -3,6 +3,8 @@ import fastHunterLogo from '@images/fasthunter/logo.png';
 import isabangLogo from '@images/24bang/logo.png';
 import aircleanView from '@images/airclean/view.webp';
 import isabangView from '@images/24bang/view.webp';
+import jejuLogo from '@images/jejuchanga/logo.png';
+import jejuView from '@images/jejuchanga/view.webp';
 import lottoLogo from '@images/lottofly/logo.png';
 
 let arrays = [
@@ -36,6 +38,17 @@ let arrays = [
         url: "https://leaderscpa.com/merchant/isabang/",
         type: 2,
         date: "22. 12. 06.",
+        device: "PC, Mobile",
+        show: false
+    },
+    {
+        name: "jejuchanga",
+        title: "제주찬가",
+        logo: jejuLogo,
+        img: jejuView,
+        url: "https://leaderscpa.com/merchant/jejuchanga/",
+        type: 2,
+        date: "22. 08. 02.",
         device: "PC, Mobile",
         show: false
     },

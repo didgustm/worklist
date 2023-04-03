@@ -52,9 +52,8 @@
 		lenis.start();
 	}
 	function back(){
-		const target = location.hash.replace('#', '');
-		if(target != '') detailShow(target);
-		else detailHide;
+		if(location.hash != '') detailShow(detailItem);
+		else detailHide();
 	}
 	
 </script>
@@ -80,6 +79,7 @@
 			}
 		}
 	} }
+	on:hashchange={back}
 />
 
 <Header { classNames } direction={ way } { gnbClick } />

@@ -20,6 +20,9 @@
 .lottofly{
     --theme:#ffd801
 }
+.jejuchanga{
+    --theme:#ff6c00
+}
 
 .inner{
     display:flex;
@@ -163,6 +166,10 @@ dd a{
     }
     .top .title{
         max-height:3.6rem
+    }
+    .top .title img{
+        max-width:90%;
+        max-height:90%
     }
     .top .utils{
         align-items:center
