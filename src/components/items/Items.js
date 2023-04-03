@@ -3,6 +3,7 @@ import fastHunterLogo from '@images/fasthunter/logo.png';
 import isabangLogo from '@images/24bang/logo.png';
 import aircleanView from '@images/airclean/view.webp';
 import isabangView from '@images/24bang/view.webp';
+import lottoLogo from '@images/lottofly/logo.png';
 
 let arrays = [
     {   
@@ -36,6 +37,17 @@ let arrays = [
         type: 2,
         date: "22. 12. 06.",
         device: "PC, Mobile",
+        show: false
+    },
+    {   
+        name: "lottofly",
+        title: "로또플라이",
+        logo: lottoLogo,
+        img: "",
+        url: "https://lottofly.co.kr/m/",
+        type: 1,
+        date: "21. 03. 29.",
+        device: "Mobile",
         show: false
     }
 ]

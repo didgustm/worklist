@@ -17,6 +17,9 @@
 .isabang{
     --theme:#0067c6
 }
+.lottofly{
+    --theme:#ffd801
+}
 
 .inner{
     display:flex;
