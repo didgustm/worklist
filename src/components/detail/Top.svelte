@@ -6,10 +6,12 @@
 </script>
 
 <div class="{ styles.top }">
-    <p class="{ styles.title }">{ item.title }</p>
+    <p class="{ styles.title }">
+        <img src="{item.logo}" alt="">
+    </p>
     {#if width <= 1000}
     <div class="{styles.utils}">
-        <a href="https://fasthunter.co.kr/" class="{styles.link}" target="_blank" rel="noreferrer">
+        <a href="{item.url}" class="{styles.link}" target="_blank" rel="noreferrer">
             <img src="{ enter }" alt="">
         </a>
         <button type="button" class="{styles.close}" on:click={ detailHide }>

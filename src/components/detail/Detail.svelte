@@ -19,7 +19,7 @@
         <Top { styles } { width } item={ detailItem } { detailHide } />
     {/if}
     <div class="{ styles.inner }">
-        <Img { styles } />
+        <Img { styles } img={ detailItem.img } />
         <Text { styles } item={ detailItem } { width } { detailHide } />
     </div>
 </div>

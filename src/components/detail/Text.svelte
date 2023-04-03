@@ -13,7 +13,7 @@
         <p class="{styles.explain}">Explain About...</p>
         <dl>
             <dt class="medium">Url:</dt>
-            <dd><a href="https://fasthunter.co.kr/" target="_blank" rel="noreferrer">https://fasthunter.co.kr/</a></dd>
+            <dd><a href="{item.url}" target="_blank" rel="noreferrer">{item.url}</a></dd>
         </dl>
         <dl>
             <dt class="medium">Category:</dt>

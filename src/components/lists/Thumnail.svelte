@@ -1,7 +1,10 @@
 <script>
-    export let styles, item
+
+    export let styles, item, title, cx
+
+    let src = item.logo
 </script>
 
-<div class="{styles.thumnail}">
-
+<div class="{ cx(styles.thumnail, title) }">
+    <img { src } alt="">
 </div>

@@ -17,7 +17,7 @@
         class="btn_more"
         on:click={ detailShow(item) }
     >
-        <Thumnail { styles } { item } />
+        <Thumnail { styles } { item } title={item.name} cx={cx} />
         <Info  { styles } { item } />
     </button>
 </div>

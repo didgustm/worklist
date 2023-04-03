@@ -1,5 +1,7 @@
 <script>
-    export let styles
+    export let styles, img
 </script>
 
-<div class="{ styles.img }"></div>
+<div class="{ styles.img }">
+    <img src="{img}" alt="">
+</div>

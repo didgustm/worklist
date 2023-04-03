@@ -27,6 +27,9 @@
 }
 
 .item .thumnail{
+    display:flex;
+    justify-content:center;
+    align-items:center;
     margin-bottom:20px;
     border-radius:10px;
     box-shadow:5px 5px 10px rgba(0,0,0,.2)
@@ -52,20 +55,17 @@
     height:250px
 }
 
-.item:nth-child(5n) .thumnail{
-    background:darkcyan
+.fasthunter{
+    background:#fff
 }
-.item:nth-child(5n-1) .thumnail{
-    background:darkkhaki
+.isabang{
+    background:#0067c6
 }
-.item:nth-child(5n-2) .thumnail{
-    background:darksalmon
+.isabang img{
+    filter:brightness(0) invert(1)
 }
-.item:nth-child(5n-3) .thumnail{
-    background:darkslateblue
-}
-.item:nth-child(5n-4) .thumnail{
-    background:darkseagreen
+.airclean{
+    background:#fff
 }
 
 .item_info{
