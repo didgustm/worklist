@@ -88,5 +88,5 @@
     <Footer />
 </main>
 {#if visible}
-<Detail { classNames } { detailItem } width={ w } { detailHide } />
+<Detail { classNames } { detailItem } width={ w } title={detailItem.name} { detailHide } />
 {/if}
