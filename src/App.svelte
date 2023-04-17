@@ -84,8 +84,12 @@
 	on:hashchange={back}
 />
 
-{#if loaded || w <= 1000}
-<Header { classNames } direction={ way } { gnbClick } />
+{#if w > 1000}
+{#if loaded}
+    <Header { classNames } direction={ way } { gnbClick } />
+{/if}
+{:else}
+    <Header { classNames } direction={ way } { gnbClick } />
 {/if}
 <main>
 	<List { classNames } { items } { motions } { detailShow } { sort } />

@@ -23,29 +23,36 @@
 }
 
 .item button{
-    width:100%
+    width:100%;
+    height:100%
 }
 
 .item .thumnail{
     display:flex;
     justify-content:center;
     align-items:center;
+    height:100%;
     margin-bottom:20px;
     border-radius:10px;
-    box-shadow:5px 5px 10px rgba(0,0,0,.2)
+    box-shadow:5px 5px 10px rgba(0,0,0,.2);
+    transform-style: preserve-3d;
+    transition:transform 0.8s
+}
+.item button:hover .thumnail{
+    transform:rotateY(180deg)
 }
 
 .item[data-type="1"]{
-    grid-row-end: span 7;
+    grid-row-end: span 6
 }
 .item[data-type="2"]{
-    grid-row-end: span 6;
+    grid-row-end: span 5
 }
 .item[data-type="3"]{
-    grid-row-end: span 5;
+    grid-row-end: span 5
 }
 
-.item[data-type="1"] .thumnail{
+/* .item[data-type="1"] .thumnail{
     height:350px
 }
 .item[data-type="2"] .thumnail{
@@ -53,9 +60,12 @@
 }
 .item[data-type="3"] .thumnail{
     height:250px
-}
+} */
 
-.fasthunter{
+.fasthunter,
+.airclean,
+.kfinco,
+.bjp{
     background:#fff
 }
 .isabang{
@@ -63,9 +73,6 @@
 }
 .isabang img{
     filter:brightness(0) invert(1)
-}
-.airclean{
-    background:#fff
 }
 .lottofly{
     background:#ffd801
@@ -78,9 +85,6 @@
 }
 .mkfly img{
     filter:brightness(0) invert(1)
-}
-.kfinco{
-    background:#fff
 }
 
 .item_info{

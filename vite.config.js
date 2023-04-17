@@ -12,7 +12,7 @@ export default defineConfig({
 					let extType = assetInfo.name.split('.').at(1);
 					if(/css/i.test(extType)) {
 						extType = 'css';
-					} else if(/png|jpe?g|svg|webp/i.test(extType)){
+					} else if(/png|jpe?g|svg|webp|gif/i.test(extType)){
 						extType = 'images';
 					} else if(/woff|woff2/i.test(extType)){
 						extType = 'fonts'

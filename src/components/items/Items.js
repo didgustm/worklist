@@ -7,10 +7,13 @@ import isabangView from '@images/24bang/view.webp';
 import jejuLogo from '@images/jejuchanga/logo.png';
 import jejuView from '@images/jejuchanga/view.webp';
 import lottoLogo from '@images/lottofly/logo.png';
+import lottoView from '@images/lottofly/view.webp';
 import mkflyLogo from "@images/mkfly/logo.png";
 import mkflyView from "@images/mkfly/view.jpg";
 import kfLogo from "@images/kf/logo.png";
 import kfView from "@images/kf/view.webp";
+import bjpLogo from "@images/bjp/logo.png";
+import bjpView from "@images/bjp/view.webp";
 
 let arrays = [
     {   
@@ -83,11 +86,22 @@ let arrays = [
         name: "lottofly",
         title: "로또플라이",
         logo: lottoLogo,
-        img: "",
+        img: lottoView,
         url: "https://lottofly.co.kr/m/",
         type: 1,
         date: "21. 03. 29.",
         device: "Mobile",
+        show: false
+    },
+    {
+        name: "bjp",
+        title: "비제이피플즈",
+        logo: bjpLogo,
+        img: bjpView,
+        url: "https://bjpeoples.com/",
+        type: 1,
+        date: "20. 01. 13",
+        device: "PC, Mobile",
         show: false
     }
 ]

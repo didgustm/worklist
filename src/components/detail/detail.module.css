@@ -29,6 +29,9 @@
 .kfinco{
     --theme:#2963c9
 }
+.bjp{
+    --theme:#000
+}
 
 .inner{
     display:flex;
