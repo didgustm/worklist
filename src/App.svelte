@@ -13,7 +13,8 @@
             beforeScroll = 0, 
             motions = [], 
             detailItem = items[0], 
-            visible = false;
+            visible = false,
+			loaded = false;
 	$: sort = 0;
 
     // Lenis
@@ -64,6 +65,7 @@
 	on:load={ () => {
 		scrollActive(y);
 		w > 1000? lenis.on('scroll', ({scroll}) => scrollActive(scroll)): lenis.destroy();
+		loaded = true;
 	} }
 	on:resize={ () => {
 		scrollActive(y);
@@ -82,7 +84,9 @@
 	on:hashchange={back}
 />
 
+{#if loaded || w <= 1000}
 <Header { classNames } direction={ way } { gnbClick } />
+{/if}
 <main>
 	<List { classNames } { items } { motions } { detailShow } { sort } />
     <Footer />

@@ -2,10 +2,15 @@ import aircleanLogo from '@images/airclean/logo.png';
 import fastHunterLogo from '@images/fasthunter/logo.png';
 import isabangLogo from '@images/24bang/logo.png';
 import aircleanView from '@images/airclean/view.webp';
+import fastHunterView from "@images/fasthunter/view.webp";
 import isabangView from '@images/24bang/view.webp';
 import jejuLogo from '@images/jejuchanga/logo.png';
 import jejuView from '@images/jejuchanga/view.webp';
 import lottoLogo from '@images/lottofly/logo.png';
+import mkflyLogo from "@images/mkfly/logo.png";
+import mkflyView from "@images/mkfly/view.jpg";
+import kfLogo from "@images/kf/logo.png";
+import kfView from "@images/kf/view.webp";
 
 let arrays = [
     {   
@@ -23,7 +28,7 @@ let arrays = [
         name: "fasthunter",
         title: "FastHunter",
         logo: fastHunterLogo,
-        img: "",
+        img: fastHunterView,
         url: "https://fasthunter.co.kr/",
         type: 1,
         date: "23. 02. 13.",
@@ -49,6 +54,28 @@ let arrays = [
         url: "https://leaderscpa.com/merchant/jejuchanga/",
         type: 2,
         date: "22. 08. 02.",
+        device: "PC, Mobile",
+        show: false
+    },
+    {   
+        name: "mkfly",
+        title: "마케팅플라이",
+        logo: mkflyLogo,
+        img: mkflyView,
+        url: "https://mkfly.co.kr/",
+        type: 2,
+        date: "22. 06. 13.",
+        device: "PC, Mobile",
+        show: false
+    },
+    {   
+        name: "kfinco",
+        title: "한국재무컨설팅센터",
+        logo: kfLogo,
+        img: kfView,
+        url: "https://k-finco.com/",
+        type: 1,
+        date: "22. 06. 13.",
         device: "PC, Mobile",
         show: false
     },

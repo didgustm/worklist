@@ -23,6 +23,12 @@
 .jejuchanga{
     --theme:#ff6c00
 }
+.mkfly{
+    --theme:#782fff
+}
+.kfinco{
+    --theme:#2963c9
+}
 
 .inner{
     display:flex;
